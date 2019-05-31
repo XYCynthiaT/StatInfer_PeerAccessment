@@ -74,30 +74,16 @@ g1 <- g + geom_vline(data = mean2,
 g1
 ```
 
-The sample mean is `r sampleMean`, and the theoretical mean is `r 1/lambda`. They are pretty close according to the plot1. Additionally, The sample variance is equal to `r sampleSd^2`, which is pretty close to the theoretical variance divided by 40, which is `r (1/lambda)^2/40`.  
+The sample mean is `r sampleMean`, and the theoretical mean is `r 1/lambda`. They are pretty close according to the plot1.   
 
 ## Sample Variance VS Theoretical Variance
 
-The plot showed the distribution of the variances of 40 exponentials. The black
-line indicated the theoretical variance and the red dash line indicated the empirical
-mean of the variances of 40 exponentials.
-
-```{r variance}
-# varicance
-var2 <- data.frame(var = c((1/lambda)^2, varsMean), 
-                   type = c("Theoretical Variance", "Sample Variance"))
-g2 <- ggplot(data = dat2, aes(x = variance)) +
-        geom_histogram(aes(y = ..density..), color = "black",
-                       fill = "white", binwidth = 5) +
-        geom_vline(data = var2, 
-                   aes(xintercept = var, color = type, linetype = type),
-                   size = 1, show.legend = TRUE) +
-        theme(legend.title = element_blank()) +
-        labs(title = "plot2. Sample Variance VS Theoretical Variance")
-g2
+The variance of the mean of 40 exponentials:  
+```{r variance, echo=TRUE}
+sampleSd^2
 ```
 
-The mean of sample variances is `r varsMean`, and the theoretical variance is `r (1/lambda)^2`. They are the almost the same according to the plot2.
+The variance of the mean of the 40 exponentials is equal to `r sampleSd^2`, which is pretty close to the theoretical variance `(1/lambda)^2/40`, which is `r (1/lambda)^2/40`.  
 
 ## Distribution
 

@@ -57,17 +57,21 @@ mean of the averages of 40 exponentials.
 
 ![](simulation_inferential_files/figure-docx/mean-1.png)<!-- -->
 
-The sample mean is 4.9869634, and the theoretical mean is 5. They are pretty close according to the plot1. Additionally, The sample variance is equal to 0.6583551, which is pretty close to the theoretical variance divided by 40, which is 0.625.  
+The sample mean is 4.9869634, and the theoretical mean is 5. They are pretty close according to the plot1.   
 
 ## Sample Variance VS Theoretical Variance
 
-The plot showed the distribution of the variances of 40 exponentials. The black
-line indicated the theoretical variance and the red dash line indicated the empirical
-mean of the variances of 40 exponentials.
+The variance of the mean of 40 exponentials:  
 
-![](simulation_inferential_files/figure-docx/variance-1.png)<!-- -->
+```r
+sampleSd^2
+```
 
-The mean of sample variances is 25.0934472, and the theoretical variance is 25. They are the almost the same according to the plot2.
+```
+## [1] 0.6583551
+```
+
+The variance of the mean of the 40 exponentials is equal to 0.6583551, which is pretty close to the theoretical variance `(1/lambda)^2/40`, which is 0.625.  
 
 ## Distribution
 
